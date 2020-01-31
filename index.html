@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Student React Resume</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins:300&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script type="text/babel">
+      // Our code will go here
+      function App(props) {
+        console.log(props)
+        return (
+            <div className="container">
+            {props.children}
+            </div>
+        );
+        }
+        // Nested elements inside the App
+        ReactDOM.render(
+            <App>
+                <header>
+                    <h1>Sally Student</h1>
+                    <p>This is all of Sally's information. Please Hire Sally Student, thanks!</p>
+                </header>
+                <section>
+                    <h2>Contact Information</h2>
+                    <article>
+                        <p>Sally Student</p>
+                        <address>
+                        <a href="mailto:1234@gmail.com">1234@gmail.com</a><br />
+                        <a href="tel:+1123456789">(112) 345 - 6789</a>
+                        </address>
+                        <img src="Picture.jpg" alt="A picture of Ilana from Broad City" />
+                    </article>
+                </section>
+                <section>
+                    <h2>Education</h2>
+                    <article>
+                        <h3>Georgia Institute of Technology</h3>
+                        <p><i>Mechanical Engineering</i>, Graduated December, 2013</p>
+                    </article>
+                </section>
+                <section> 
+                    <h2>Professional Experience</h2>
+                    <article>
+                        <h3>Space Force</h3>
+                        <p><i>Lead Cadet</i>, 2001-2019<br />
+                        Head of space cadet operations on the Enterprise.</p>
+                        <h3>Hogwarts</h3> 
+                        <p><i>Hogwarts Prefect</i>, 1994-2001<br /> 
+                        Leader of witches and wizards.</p>
+                    </article>
+                </section>
+            </App>,
+            document.querySelector('#body')
+            );
+    </script>
+</body>
+</html>
